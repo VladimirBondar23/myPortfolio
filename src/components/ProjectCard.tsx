@@ -26,7 +26,7 @@ export function ProjectCard({ project }: Props) {
 
   const showNext = () => {
     setCurrentIndex((prev) =>
-      prev < project.images.length - 1 ? prev + 1 : prev
+      prev < project.images.length - 1 ? prev + 1 : prev,
     );
   };
 
@@ -40,10 +40,22 @@ export function ProjectCard({ project }: Props) {
         <div className="relative">
           {/* Prefetch adjacent images so arrow clicks feel instant */}
           {currentIndex > 0 && (
-            <img alt="" aria-hidden src={project.images[currentIndex - 1]} className="hidden" fetchPriority="low" />
+            <img
+              alt=""
+              aria-hidden
+              src={project.images[currentIndex - 1]}
+              className="hidden"
+              fetchPriority="low"
+            />
           )}
           {currentIndex < project.images.length - 1 && (
-            <img alt="" aria-hidden src={project.images[currentIndex + 1]} className="hidden" fetchPriority="low" />
+            <img
+              alt=""
+              aria-hidden
+              src={project.images[currentIndex + 1]}
+              className="hidden"
+              fetchPriority="low"
+            />
           )}
           <img
             src={project.images[currentIndex]}
@@ -147,4 +159,3 @@ export function ProjectCard({ project }: Props) {
     </article>
   );
 }
-
