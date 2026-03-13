@@ -13,6 +13,7 @@ function AboutMe() {
           <img
             src={vladimirImg}
             alt="Vladimir Bondar"
+            decoding="async"
             className="w-full rounded-2xl object-cover shadow-lg"
           />
         </div>

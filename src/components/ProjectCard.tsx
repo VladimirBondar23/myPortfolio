@@ -38,9 +38,17 @@ export function ProjectCard({ project }: Props) {
     >
       {project.images[currentIndex] && (
         <div className="relative">
+          {/* Prefetch adjacent images so arrow clicks feel instant */}
+          {currentIndex > 0 && (
+            <img alt="" aria-hidden src={project.images[currentIndex - 1]} className="hidden" fetchPriority="low" />
+          )}
+          {currentIndex < project.images.length - 1 && (
+            <img alt="" aria-hidden src={project.images[currentIndex + 1]} className="hidden" fetchPriority="low" />
+          )}
           <img
             src={project.images[currentIndex]}
             alt={project.title}
+            decoding="async"
             onClick={() => setIsZoomed(true)}
             className={`h-48 w-full cursor-zoom-in object-cover transition-transform duration-300 ${
               isHovered ? "scale-105 " : ""
