@@ -18,6 +18,7 @@ export function ProjectCard({ project }: Props) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const [isZoomed, setIsZoomed] = useState(false);
+  const [showFullDescription, setShowFullDescription] = useState(false);
 
   const showPrev = () => {
     setCurrentIndex((prev) => (prev > 0 ? prev - 1 : prev));
@@ -31,7 +32,7 @@ export function ProjectCard({ project }: Props) {
 
   return (
     <article
-      className="overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/60 shadow-lg shadow-slate-900/40"
+      className="overflow-hidden rounded-2xl border border-slate-900 bg-slate-900/60 shadow-lg shadow-slate-900/40"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -79,7 +80,25 @@ export function ProjectCard({ project }: Props) {
           {project.shortDescription}
         </p>
 
-        <div className="mt-3 flex flex-wrap gap-2">
+        <p className="mt-2 text-sm text-slate-400">
+          {showFullDescription
+            ? project.description
+            : `${project.description.slice(0, 140)}${
+                project.description.length > 140 ? "..." : ""
+              }`}
+        </p>
+
+        {project.description.length > 140 && (
+          <button
+            type="button"
+            onClick={() => setShowFullDescription((prev) => !prev)}
+            className="mt-1 text-xs font-medium text-sky-400 hover:text-sky-300"
+          >
+            {showFullDescription ? "Show less" : "Show more"}
+          </button>
+        )}
+
+        <div className="mt-4 flex flex-wrap gap-2">
           {project.techStack.map((tech) => (
             <span
               key={tech}

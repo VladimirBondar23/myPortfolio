@@ -2,9 +2,9 @@ export const projects = [
   {
     id: "2",
     title: "AI Chat App",
-    shortDescription: "A scalabe fullstack app for communication with AI",
+    shortDescription: "A chat app for communication with AI",
     description:
-      "The app is able to communicate with AI, store messages in a database, and display them in a chat interface. Supports Docker compose, RabbitMQ for message queue, Cookies, and Gemini API for AI communication. The app is scalable and split into 3 different microservices. Uses Singleton and Visitor Design Patterns and able to Log system messages into console and log files.",
+      "The app is able to communicate with AI, store messages in a database, and display them in a chat interface. Supports Docker compose, RabbitMQ for efficient logging, Cookies, and Gemini API for AI communication. The app is scalable and split into 3 different microservices. Uses Singleton and Visitor Design Patterns and able to Log system messages into console and log files.",
     techStack: [
       "Node.js",
       "Javascript",
