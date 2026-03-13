@@ -1,3 +1,11 @@
+// Resolve image paths so Vite bundles them (required for production deploy)
+const assetUrls: Record<string, string> = import.meta.glob(
+  "../assets/*.{jpg,png}",
+  { eager: true, query: "?url", import: "default" }
+);
+const getImageUrl = (path: string) =>
+  assetUrls[path.replace(/^src\//, "../")] ?? path;
+
 export const projects = [
   {
     id: "2",
@@ -77,5 +85,4 @@ export const projects = [
       "src/assets/lbsd-3.png",
     ],
   },
-  
-];
+].map((p) => ({ ...p, images: p.images.map(getImageUrl) }));
