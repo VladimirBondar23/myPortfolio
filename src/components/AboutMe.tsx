@@ -8,7 +8,7 @@ function AboutMe() {
         <p className="text-xl text-slate-400 font-medium mt-1">Full-stack Developer</p>
       </div>
 
-      <div className="flex flex-col gap-8 md:flex-row md:items-start">
+      <div className="flex flex-col gap-8 rounded-2xl border border-slate-900 bg-slate-900/60 p-6 shadow-lg shadow-slate-900/40 md:flex-row md:items-start md:p-8">
         <div className="shrink-0 w-40 md:w-48">
           <img
             src={vladimirImg}
