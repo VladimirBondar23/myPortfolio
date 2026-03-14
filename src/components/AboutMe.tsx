@@ -6,12 +6,13 @@ function AboutMe() {
       <div className="mb-8">
         <h2 className="text-3xl font-bold text-white tracking-tight">Vladimir Bondar</h2>
         <p className="text-xl text-slate-400 font-medium mt-1">Full-stack Developer</p>
-        <div className="mt-3 flex flex-wrap items-center gap-4 text-sky-400">
+        <p className="mt-4 text-md font-medium text-slate-400">Contact me: </p>
+        <div className="mt-2 flex flex-wrap items-center gap-3">
           <a
             href="https://github.com/VladimirBondar23"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 font-medium hover:text-sky-300"
+            className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-base font-semibold text-slate-900 transition-colors hover:bg-slate-100 hover:border-slate-300"
             aria-label="GitHub"
           >
             <svg className="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
@@ -23,7 +24,7 @@ function AboutMe() {
             href="https://linkedin.com/in/vladimir-bondar-"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 font-medium hover:text-sky-300"
+            className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-base font-semibold text-slate-900 transition-colors hover:bg-slate-100 hover:border-slate-300"
             aria-label="LinkedIn"
           >
             <svg className="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
@@ -31,7 +32,23 @@ function AboutMe() {
             </svg>
             LinkedIn
           </a>
-          <span className="font-medium text-sky-400">Email: vdecbel@gmail.com</span>
+          <span className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-base font-semibold text-slate-900">
+            <svg className="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            vdecbel@gmail.com
+          </span>
+          <a
+            href="tel:0584718822"
+            className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-base font-semibold text-slate-900 transition-colors hover:bg-slate-100 hover:border-slate-300"
+            aria-label="Phone"
+          >
+            <svg className="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+            </svg>
+            0584718822
+          </a>
         </div>
       </div>
 
